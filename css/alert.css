@@ -1,0 +1,65 @@
+.container {
+  height: 100vh;
+  padding: 40px 10vw;
+  overflow-y: scroll;
+}
+.page-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+  background: linear-gradient(90deg, #00d4ff, #ffffff);
+  background-clip: text;
+  color: transparent;
+}
+.page-subtitle {
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.85;
+  margin-bottom: 50px;
+}
+
+.alert-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.alert-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  border-left: 6px solid #ff4757;
+  margin-bottom: 20px;
+}
+.alert-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.alert-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.alert-location {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.alert-time {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.alert-desc {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.no-alerts {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 22px;
+}

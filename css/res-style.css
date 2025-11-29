@@ -1,0 +1,99 @@
+@import url(main.css);
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: background 2s;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  gap: 60px;
+  padding: 100px 10vw 40px;
+  align-items: flex-start;
+}
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.right {
+  width: 55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.location {
+  font-size: 40px;
+  font-weight: 600;
+}
+.temp {
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -8px;
+}
+.condition {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+.condition img {
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+.condition-text {
+  font-size: 42px;
+  font-weight: 500;
+}
+.updated {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.14);
+}
+.label {
+  font-size: 14px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.value {
+  font-size: 36px;
+  font-weight: 600;
+}
+.unit {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  z-index: 999;
+}

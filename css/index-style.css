@@ -1,0 +1,88 @@
+@import url(main.css);
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  padding: 40px calc(40px + 10vw);
+  gap: 50px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  gap: 20px;
+}
+.location {
+  font-size: 36px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+.location span {
+  font-weight: 600;
+}
+.current-temp {
+  font-size: 160px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -5px;
+}
+.condition-con {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+}
+.condition-icon {
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+}
+.condition-text {
+  font-size: 36px;
+  font-weight: 500;
+}
+.last-updated {
+  font-size: 15px;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+.rightSide {
+  display: grid;
+  width: 50vw;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-content: start;
+  padding-top: 80px;
+}
+.detail-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+.detail-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.12);
+}
+.detail-label {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.detail-value {
+  font-size: 32px;
+  font-weight: 600;
+}
+.detail-unit {
+  font-size: 18px;
+  opacity: 0.7;
+  margin-left: 4px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather APP Team7</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index-style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Team 7</div>
+      <div class="nav-menu">
+        <a href="index.html" class="active">Current</a>
+        <a href="search.html">Search</a>
+        <a href="alerts.html">Alerts</a>
+        <a
+          href="https://github.com/wynaung19/Weather_API_Team_PJ"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+    </div>
+
+    <div class="loading" id="loading">Please Wait ...</div>
+    <div class="error" id="error" style="display: none"></div>
+
+    <div class="main" id="weatherContent" style="display: none">
+      <div class="leftSide">
+        <div class="location">
+          <span id="cityName">Seoul</span>,
+          <span id="country">South Korea</span>
+        </div>
+        <div class="current-temp" id="temperature">7°</div>
+        <div class="condition-con">
+          <img id="conditionIcon" class="condition-icon" src="" alt="Weather" />
+          <div class="condition-text" id="conditionText">Light rain</div>
+        </div>
+        <div class="last-updated" id="lastUpdated">Last updated: just now</div>
+      </div>
+
+      <div class="rightSide">
+        <div class="detail-card">
+          <div class="detail-label">Feels Like</div>
+          <div class="detail-value" id="feelsLike">
+            4<span class="detail-unit">°C</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Humidity</div>
+          <div class="detail-value" id="humidity">
+            100<span class="detail-unit">%</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Wind Speed</div>
+          <div class="detail-value" id="windSpeed">
+            19.4<span class="detail-unit"> km/h</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Wind Direction</div>
+          <div class="detail-value" id="windDir">WNW</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Precipitation</div>
+          <div class="detail-value" id="precip">
+            0.08<span class="detail-unit"> mm</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Visibility</div>
+          <div class="detail-value" id="visibility">
+            7<span class="detail-unit"> km</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Pressure</div>
+          <div class="detail-value" id="pressure">
+            1012<span class="detail-unit"> mb</span>
+          </div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">UV Index</div>
+          <div class="detail-value" id="uv">0.4</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/key.js"></script>
+    <script src="js/api-index.js"></script>
+  </body>
+</html>

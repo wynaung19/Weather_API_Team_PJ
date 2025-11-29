@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Result</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/res-style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Team 7</div>
+      <div class="nav-menu">
+        <a href="search.html">Back to Search</a>
+      </div>
+    </div>
+
+    <div class="container" id="content" style="display: none">
+      <div class="left">
+        <div class="location">
+          <span id="city">-</span>, <span id="country">-</span>
+        </div>
+        <div class="temp" id="temp">--°</div>
+        <div class="condition">
+          <img id="icon" src="" alt="" />
+          <div class="condition-text" id="text">-</div>
+        </div>
+        <div class="updated">Updated: <span id="time">-</span></div>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <div class="label">Feels Like</div>
+          <div class="value" id="feels">--<span class="unit">°C</span></div>
+        </div>
+        <div class="card">
+          <div class="label">Humidity</div>
+          <div class="value" id="humid">--<span class="unit">%</span></div>
+        </div>
+        <div class="card">
+          <div class="label">Wind Speed</div>
+          <div class="value" id="wind">--<span class="unit"> km/h</span></div>
+        </div>
+        <div class="card">
+          <div class="label">Wind Dir</div>
+          <div class="value" id="dir">-</div>
+        </div>
+        <div class="card">
+          <div class="label">Precipitation</div>
+          <div class="value" id="precip">--<span class="unit"> mm</span></div>
+        </div>
+        <div class="card">
+          <div class="label">Visibility</div>
+          <div class="value" id="vis">--<span class="unit"> km</span></div>
+        </div>
+        <div class="card">
+          <div class="label">Pressure</div>
+          <div class="value" id="press">--<span class="unit"> mb</span></div>
+        </div>
+        <div class="card">
+          <div class="label">UV Index</div>
+          <div class="value" id="uv">-</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/key.js"></script>
+    <script src="./js/res-api.js"></script>
+  </body>
+</html>

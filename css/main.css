@@ -1,0 +1,131 @@
+:root {
+  --primary: #00bfff;
+  --hover: #fff;
+  --text: #b0b3c1;
+  --text-active: #ffffff;
+  --bg: #0f0c29;
+  --card: #ffffff0d;
+  --accent: #00d4ff;
+  --text: #e0e0ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+  transition: background 1.8s;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+body.sunny-day {
+  background: linear-gradient(135deg, #ff9a56, #ff6b6b);
+}
+body.clear-night {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+body.partly-cloudy {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+body.cloudy {
+  background: linear-gradient(135deg, #636e72, #2d3436);
+}
+body.rainy {
+  background: linear-gradient(135deg, #2d3436, #636e72);
+}
+body.snow {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+body.mist {
+  background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+body.thunder {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.navbar {
+  height: 70px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 44px;
+  font-size: 1.15em;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--hover);
+  border-radius: 2px;
+  transition: width 0.5s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--text-active);
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  text-shadow: 0 0 8px rgba(176, 240, 253, 0.4);
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  opacity: 0.8;
+}
+.error {
+  color: #ff6b6b;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
