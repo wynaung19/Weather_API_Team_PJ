@@ -20,7 +20,9 @@ body {
   width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
+  margin-top: 40px;
 }
 .right {
   width: 55%;
