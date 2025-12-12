@@ -90,6 +90,7 @@
   .main {
     gap: 30px;
     padding: 30px calc(30px + 5vw);
+    margin-top: 70px;
   }
 
   .leftSide {
