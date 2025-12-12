@@ -98,14 +98,17 @@
       const menuBtn = document.querySelector(".menu-icon");
       const menu = document.querySelector(".nav-menu");
 
-      menuBtn.onclick = () => {
-        menu.classList.toggle("active");
-      };
-      document.addEventListener("click", (e) => {
-        if (!menuBtn.contains(e.target)) {
-          menu.classList.remove("active");
-        }
-      });
+      if (menuBtn && menu) {
+        menuBtn.onclick = () => {
+          menu.classList.toggle("active");
+        };
+
+        document.addEventListener("click", (e) => {
+          const clickedOutside =
+            !menuBtn.contains(e.target) && !menu.contains(e.target);
+          if (clickedOutside) menu.classList.remove("active");
+        });
+      }
     </script>
 
     <script src="./js/key.js"></script>

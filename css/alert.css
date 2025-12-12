@@ -1,7 +1,8 @@
 .container {
-  height: 100vh;
+  margin-top: 70px;
   padding: 40px 10vw;
-  overflow-y: scroll;
+  overflow-y: auto;
+  min-height: calc(100vh - 70px);
 }
 .page-title {
   text-align: center;
@@ -63,4 +64,82 @@
   text-align: center;
   padding: 100px 20px;
   font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  .page-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .alert-card {
+    padding: 20px;
+  }
+
+  .alert-title {
+    font-size: 18px;
+  }
+
+  .alert-location {
+    font-size: 14px;
+  }
+
+  .alert-time {
+    font-size: 12px;
+  }
+
+  .alert-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    margin: 15px 0;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .alert-card {
+    padding: 16px;
+    border-left-width: 4px;
+  }
+
+  .alert-title {
+    font-size: 16px;
+  }
+
+  .alert-location {
+    font-size: 13px;
+  }
+
+  .alert-time {
+    font-size: 11px;
+  }
+
+  .alert-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .no-alerts {
+    padding: 60px 15px;
+    font-size: 18px;
+  }
 }

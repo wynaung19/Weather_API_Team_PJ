@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  padding: 40px calc(40px + 10vw);
+  padding: 80px calc(40px + 10vw) 40px;
   gap: 50px;
+  margin-top: 70px;
 }
 
 .leftSide {
@@ -85,4 +85,144 @@
   font-size: 18px;
   opacity: 0.7;
   margin-left: 4px;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    gap: 30px;
+    padding: 30px calc(30px + 5vw);
+  }
+
+  .leftSide {
+    width: 50vw;
+  }
+
+  .rightSide {
+    width: 50vw;
+  }
+
+  .current-temp {
+    font-size: 120px;
+  }
+
+  .location {
+    font-size: 28px;
+  }
+
+  .condition-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .leftSide {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightSide {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+    gap: 16px;
+  }
+
+  .location {
+    font-size: 24px;
+  }
+
+  .current-temp {
+    font-size: 80px;
+    letter-spacing: -2px;
+  }
+
+  .condition-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .condition-text {
+    font-size: 22px;
+  }
+
+  .condition-con {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .detail-card {
+    padding: 20px;
+  }
+
+  .detail-label {
+    font-size: 12px;
+  }
+
+  .detail-value {
+    font-size: 24px;
+  }
+
+  .detail-unit {
+    font-size: 14px;
+  }
+
+  .last-updated {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 15px;
+  }
+
+  .rightSide {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .location {
+    font-size: 18px;
+  }
+
+  .current-temp {
+    font-size: 56px;
+  }
+
+  .condition-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .condition-text {
+    font-size: 18px;
+  }
+
+  .condition-con {
+    gap: 12px;
+  }
+
+  .detail-card {
+    padding: 16px;
+  }
+
+  .detail-label {
+    font-size: 11px;
+  }
+
+  .detail-value {
+    font-size: 20px;
+  }
+
+  .detail-unit {
+    font-size: 12px;
+  }
 }

@@ -58,5 +58,17 @@
         }
       });
     </script>
+    <script>
+      document.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          document.getElementById("search").click();
+        }
+      });
+      document.getElementById("search").onclick = () => {
+        const city = document.getElementById("city").value.trim();
+        if (!city) return alert("Please enter a city name");
+        window.location.href = `result.html?city=${encodeURIComponent(city)}`;
+      };
+    </script>
   </body>
 </html>

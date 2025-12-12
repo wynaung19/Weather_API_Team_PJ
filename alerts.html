@@ -14,6 +14,9 @@
   <body>
     <div class="navbar">
       <div class="logo">Team 7</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <div class="nav-menu">
         <a href="index.html">Current</a>
         <a href="search.html">Search</a>
@@ -36,11 +39,20 @@
     </div>
 
     <script>
-      const menuIcon = document.querySelector(".menu-icon");
-      const navMenu = document.querySelector(".nav-menu");
-      menuIcon.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
+      const menuBtn = document.querySelector(".menu-icon");
+      const menu = document.querySelector(".nav-menu");
+
+      if (menuBtn && menu) {
+        menuBtn.onclick = () => {
+          menu.classList.toggle("active");
+        };
+
+        document.addEventListener("click", (e) => {
+          const clickedOutside =
+            !menuBtn.contains(e.target) && !menu.contains(e.target);
+          if (clickedOutside) menu.classList.remove("active");
+        });
+      }
     </script>
 
     <script src="js/alert.js"></script>
