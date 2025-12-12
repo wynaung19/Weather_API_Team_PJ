@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="css/index-style.css" />
   </head>
   <body>
-    <div class="navbar">
+    <nav class="navbar">
       <div class="logo">Team 7</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <div class="nav-menu">
         <a href="index.html" class="active">Current</a>
         <a href="search.html">Search</a>
@@ -23,7 +26,7 @@
           >GitHub</a
         >
       </div>
-    </div>
+    </nav>
 
     <div class="loading" id="loading">Please Wait ...</div>
     <div class="error" id="error" style="display: none"></div>
@@ -91,6 +94,20 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const menuBtn = document.querySelector(".menu-icon");
+      const menu = document.querySelector(".nav-menu");
+
+      menuBtn.onclick = () => {
+        menu.classList.toggle("active");
+      };
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target)) {
+          menu.classList.remove("active");
+        }
+      });
+    </script>
+
     <script src="./js/key.js"></script>
     <script src="js/api-index.js"></script>
   </body>

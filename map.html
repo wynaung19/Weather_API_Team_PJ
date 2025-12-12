@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Windy Map Example</title>
+    <style>
+      #windy {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="windy"></div>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+
+    <script>
+      const options = {
+        key: "G34vlsZbqLcyusqQ2unLA6ZFsYcb1rT0",
+        lat: 13.7367,
+        lon: 100.5231,
+        zoom: 5,
+      };
+
+      windyInit(options, function (windyAPI) {
+        const { map } = windyAPI;
+        console.log("Windy map loaded!");
+      });
+    </script>
+  </body>
+</html>

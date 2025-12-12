@@ -13,6 +13,9 @@
   <body>
     <div class="navbar">
       <div class="logo">Team 7</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <div class="nav-menu">
         <a href="index.html">Current</a>
         <a href="search.html" class="active">Search</a>
@@ -43,16 +46,17 @@
     </div>
 
     <script>
-      document.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-          document.getElementById("search").click();
+      const menuBtn = document.querySelector(".menu-icon");
+      const menu = document.querySelector(".nav-menu");
+
+      menuBtn.onclick = () => {
+        menu.classList.toggle("active");
+      };
+      document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target)) {
+          menu.classList.remove("active");
         }
       });
-      document.getElementById("search").onclick = () => {
-        const city = document.getElementById("city").value.trim();
-        if (!city) return alert("Please enter a city name");
-        window.location.href = `result.html?city=${encodeURIComponent(city)}`;
-      };
     </script>
   </body>
 </html>
